@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>tomcat-helloworld</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <!--给survlet起个名字，可以是任意的 -->
+    <servlet-name>hello</servlet-name>
+    <!--servlet的路径（包名+类名)-->
+    <servlet-class>heconghua.helloworld</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>hello</servlet-name>
+    <!-- 这是在浏览器中输入的访问该survlet的url，任意的 -->
+    <url-pattern>/heconghua</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 配置一个servlet -->
+  <servlet>
+    <servlet-name>myservlet</servlet-name>
+    <servlet-class>myservlet.myservlet</servlet-class>
+  </servlet>
+  <!-- 配置一个servlet映射的URL路径 -->
+  <servlet-mapping>
+    <servlet-name>myservlet</servlet-name>
+    <url-pattern>/myservlet</url-pattern>
+  </servlet-mapping>
+</web-app>
